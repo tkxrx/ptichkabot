@@ -21,5 +21,5 @@ async def start_cmd(message: Message):
 
 @router.callback_query(lambda c: c.data.startswith('c'))
 async def make_menu(callback: CallbackQuery):
-    await callback.message.answer(text=start_text, reply_markup=main_keyboard(), parse_mode="HTML")
+    await callback.message.answer(text=main_text, reply_markup=main_keyboard(), parse_mode="HTML")
     await callback.answer()

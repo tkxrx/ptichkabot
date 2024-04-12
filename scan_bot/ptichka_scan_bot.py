@@ -40,7 +40,7 @@ async def start_cmd(message: Message, command: CommandObject):
         uid = decode_payload(args)
         increment_user_points(uid)
 
-        await message.answer("Успешно!")
+        await message.answer(f"Баллы успешно начислены пользователю с id {uid}!")
 
 
 async def start_up():

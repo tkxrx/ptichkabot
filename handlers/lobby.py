@@ -16,8 +16,7 @@ async def choose_in_main(callback: CallbackQuery):
         await callback.message.answer(text=lex[int(choice)], parse_mode="HTML", reply_markup=to_menu)
 
     if choice == "1":
-        await callback.message.answer_photo(caption=lex[int(choice)], photo=FSInputFile("tutor.png"), parse_mode="HTML")
-        await callback.message.answer(text=lex[int(choice)], parse_mode="HTML", reply_markup=to_menu)
+        await callback.message.answer_photo(caption=lex[int(choice)], photo=FSInputFile("book.png"), parse_mode="HTML", reply_markup=to_menu)
 
     if choice == "2":
         await callback.message.answer(text=lex[int(choice)], parse_mode="HTML", reply_markup=location_keyboard())
